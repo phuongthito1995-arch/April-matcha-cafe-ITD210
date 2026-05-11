@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!-- This document is the home page for the ITD 210 capstone website. -->
+<html lang="en">
+  <head>
+    <!-- Meta tags help the page display correctly on mobile and desktop. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>April Matcha Café | Home</title>
+
+    <!-- Google Fonts create a polished café brand identity. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Phosphor Icons for matcha-themed iconography. -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css"
+    />
+
+    <!-- Shared CSS keeps all five pages visually consistent. -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Skip link supports keyboard users by allowing them to jump to content. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Header contains the brand and global navigation used on every page. -->
+    <header class="site-header">
+      <nav class="nav-wrap" aria-label="Main navigation">
+        <a class="logo" href="index.html">
+          <i class="ph-fill ph-leaf logo-icon" aria-hidden="true"></i>
+          April Matcha Café
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero video-hero" aria-labelledby="home-title">
+        <video class="hero-video" autoplay muted loop playsinline>
+          <source src="videos/matcha-hero.mp4" type="video/mp4" />
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <!-- Floating matcha leaves drift across the hero. -->
+        <div class="leaf-field" aria-hidden="true">
+          <i class="ph-fill ph-leaf leaf leaf-1"></i>
+          <i class="ph-fill ph-leaf leaf leaf-2"></i>
+          <i class="ph-fill ph-leaf leaf leaf-3"></i>
+          <i class="ph-fill ph-leaf leaf leaf-4"></i>
+          <i class="ph-fill ph-leaf leaf leaf-5"></i>
+        </div>
+
+        <div class="hero-content">
+          <p class="eyebrow">
+            <i class="ph-fill ph-leaf"></i> Hand-whisked calm
+          </p>
+
+          <h1 id="home-title">
+            A cozy matcha café designed to slow your day down.
+          </h1>
+
+          <p class="lead">
+            April Matcha Café is a story-driven café concept centered around
+            ceremonial matcha, soft desserts, and a warm, calming atmosphere.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="button" href="services.html">
+              Explore the menu
+              <i class="ph ph-arrow-right"></i>
+            </a>
+            <a class="button-secondary" href="contact.html">
+              <i class="ph ph-map-pin"></i>
+              Plan a visit
+            </a>
+          </div>
+        </div>
+
+        <span class="hero-scroll-cue" aria-hidden="true">
+          <i class="ph ph-mouse-simple"></i>
+          Scroll
+        </span>
+      </section>
+      <section
+        class="section highlights-section"
+        aria-labelledby="highlights-title"
+      >
+        <span class="deco-orb deco-orb-left" aria-hidden="true"></span>
+        <span class="deco-orb deco-orb-right" aria-hidden="true"></span>
+
+        <p class="eyebrow" data-reveal>
+          <i class="ph-fill ph-sparkle"></i> Why this café stands out
+        </p>
+
+        <h2 id="highlights-title" data-reveal>
+          Matcha, atmosphere, and thoughtful details.
+        </h2>
+
+        <div class="card-grid three">
+          <article class="card" data-reveal data-reveal-delay="0">
+            <div class="card-icon">
+              <i class="ph-duotone ph-flower-lotus"></i>
+            </div>
+            <span class="tag">Craft</span>
+            <h3>Authentic preparation</h3>
+            <p>
+              Every drink is imagined with ceremonial matcha, whisked carefully
+              for smooth texture and vibrant flavor.
+            </p>
+          </article>
+
+          <article class="card" data-reveal data-reveal-delay="120">
+            <div class="card-icon">
+              <i class="ph-duotone ph-cloud"></i>
+            </div>
+            <span class="tag">Mood</span>
+            <h3>Calm café experience</h3>
+            <p>
+              Soft tones, gentle hover effects, and clean layout choices reflect
+              a peaceful café atmosphere.
+            </p>
+          </article>
+
+          <article class="card" data-reveal data-reveal-delay="240">
+            <div class="card-icon">
+              <i class="ph-duotone ph-heart"></i>
+            </div>
+            <span class="tag">Story</span>
+            <h3>More than a drink stop</h3>
+            <p>
+              April Matcha Café is a place for study sessions, friend dates, and
+              mindful breaks.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="story-strip" data-reveal>
+          <div class="story-image">
+            <img
+              src="images/Matcha latte.jpeg"
+              alt="A hand-whisked matcha latte in a ceramic cup."
+            />
+            <span class="story-image-badge" aria-hidden="true">
+              <i class="ph-fill ph-leaf"></i>
+              Daily ritual
+            </span>
+          </div>
+
+          <div class="story-text">
+            <p class="eyebrow">
+              <i class="ph-fill ph-flower-lotus"></i> The feeling
+            </p>
+
+            <h2>Come for the matcha. Stay for the quiet little ritual.</h2>
+
+            <ul class="feature-list">
+              <li>
+                <i class="ph-duotone ph-sun feature-icon"></i>
+                <span>
+                  <strong>Morning reset:</strong> bright tea drinks and house
+                  pastries.
+                </span>
+              </li>
+              <li>
+                <i class="ph-duotone ph-coffee feature-icon"></i>
+                <span>
+                  <strong>Afternoon pause:</strong> desserts, tea flights, and
+                  soft music.
+                </span>
+              </li>
+              <li>
+                <i class="ph-duotone ph-users-three feature-icon"></i>
+                <span>
+                  <strong>Community feel:</strong> seasonal workshops and
+                  tasting events.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer closes the page and repeats the project identity. -->
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <i class="ph-fill ph-leaf footer-leaf"></i>
+        <h3>April Matcha Café</h3>
+      </div>
+
+      <p>
+        Crafted for quiet mornings, slow afternoons, and meaningful
+        conversations.
+      </p>
+
+      <div class="footer-socials" aria-label="Social links">
+        <a href="#" aria-label="Instagram">
+          <i class="ph ph-instagram-logo"></i>
+        </a>
+        <a href="#" aria-label="TikTok">
+          <i class="ph ph-tiktok-logo"></i>
+        </a>
+        <a href="#" aria-label="Pinterest">
+          <i class="ph ph-pinterest-logo"></i>
+        </a>
+        <a href="contact.html" aria-label="Contact">
+          <i class="ph ph-envelope-simple"></i>
+        </a>
+      </div>
+
+      <p class="copyright">
+        © 2026 April Matcha Café • Created by Thi Phuong To
+      </p>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

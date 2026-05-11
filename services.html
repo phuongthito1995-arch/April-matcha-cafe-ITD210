@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!-- This document is the menu page for the ITD 210 capstone website. -->
+<html lang="en">
+  <head>
+    <!-- Meta tags help the page display correctly on mobile and desktop. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>April Matcha Café | Menu</title>
+
+    <!-- Google Fonts create a polished café brand identity. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Phosphor Icons for matcha-themed iconography. -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css"
+    />
+
+    <!-- Shared CSS keeps all five pages visually consistent. -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Skip link supports keyboard users by allowing them to jump to content. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Header contains the brand and global navigation used on every page. -->
+    <header class="site-header">
+      <nav class="nav-wrap" aria-label="Main navigation">
+        <a class="logo" href="index.html">
+          <i class="ph-fill ph-leaf logo-icon" aria-hidden="true"></i>
+          April Matcha Café
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" aria-current="page">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <!-- Featured drinks section introduces the main café menu. -->
+      <section class="section menu-section" aria-labelledby="menu-title">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">
+            <i class="ph-fill ph-leaf"></i> Featured Menu
+          </p>
+
+          <h1 id="menu-title">
+            A thoughtful menu built around matcha and gentle comfort.
+          </h1>
+
+          <p>
+            Every drink is hand-whisked from ceremonial-grade matcha, paired
+            with house-made syrups and balanced desserts. Sit a while —
+            everything here is meant to be enjoyed slowly.
+          </p>
+
+          <div class="menu-chips" aria-hidden="true">
+            <span class="menu-chip">
+              <i class="ph-fill ph-coffee"></i> Signature Drinks
+            </span>
+            <span class="menu-chip">
+              <i class="ph-fill ph-cookie"></i> Desserts
+            </span>
+            <span class="menu-chip">
+              <i class="ph-fill ph-flower-lotus"></i> Tea Flights
+            </span>
+          </div>
+        </div>
+
+        <div class="card-grid three menu-grid">
+          <article class="card menu-card">
+            <img
+              src="images/Strawberry matcha.jpeg"
+              alt="Strawberry Matcha Latte in a clear glass"
+            />
+
+            <span class="tag">Signature drink</span>
+
+            <h3>Strawberry Matcha Latte</h3>
+
+            <p>
+              Layered milk, strawberry puree, and smooth matcha create a fresh
+              visual drink.
+            </p>
+
+            <p class="price">$7.50</p>
+          </article>
+
+          <article class="card menu-card">
+            <img
+              src="images/Matcha latte.jpeg"
+              alt="Ceremonial hot matcha served in a ceramic bowl"
+            />
+
+            <span class="tag">Traditional favorite</span>
+
+            <h3>Ceremonial Hot Matcha</h3>
+
+            <p>
+              A classic tea experience that supports the story of care, craft,
+              and authenticity.
+            </p>
+
+            <p class="price">$5.75</p>
+          </article>
+
+          <article class="card menu-card">
+            <img
+              src="images/Browse sugar matcha.jpeg"
+              alt="Brown Sugar Matcha Cloud with cream foam"
+            />
+
+            <span class="tag">Dessert drink</span>
+
+            <h3>Brown Sugar Matcha Cloud</h3>
+
+            <p>
+              Matcha with brown sugar and light cream foam for a richer café
+              treat.
+            </p>
+
+            <p class="price">$7.95</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Dessert section adds food choices and a tasting experience. -->
+      <section class="section menu-section" aria-labelledby="desserts-title">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">
+            <i class="ph-fill ph-cookie"></i> Food &amp; Extras
+          </p>
+
+          <h2 id="desserts-title">
+            Desserts and experiences that deepen the café story.
+          </h2>
+
+          <p>
+            From roasted-tea tiramisu to a guided tea-tasting flight, the
+            kitchen leans into texture, warmth, and small sharable moments.
+          </p>
+        </div>
+
+        <div class="card-grid three menu-grid">
+          <article class="card menu-card">
+            <img
+              src="images/Hoji Cha tiramisu.png"
+              alt="Hojicha Tiramisu in a glass dessert cup"
+            />
+
+            <span class="tag">Dessert</span>
+
+            <h3>Hojicha Tiramisu</h3>
+
+            <p>A creamy dessert with roasted tea notes.</p>
+
+            <p class="price">$6.25</p>
+          </article>
+
+          <article class="card menu-card">
+            <img
+              src="images/Waffle with strawberry.png"
+              alt="Mochi waffle plate with whipped cream and fruit"
+            />
+
+            <span class="tag">Bakery</span>
+
+            <h3>Mochi Waffle Plate</h3>
+
+            <p>Chewy waffles with whipped cream and seasonal fruit.</p>
+
+            <p class="price">$8.25</p>
+          </article>
+
+          <article class="card menu-card">
+            <img
+              src="images/Tea flight.png"
+              alt="Tea tasting flight with matcha, hojicha, and yuzu tea"
+            />
+
+            <span class="tag">Experience</span>
+
+            <h3>Tea Tasting Flight</h3>
+
+            <p>Guests sample matcha, hojicha, and yuzu tea pairings.</p>
+
+            <p class="price">$12.00</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer closes the page and repeats the project identity. -->
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <i class="ph-fill ph-leaf footer-leaf"></i>
+        <h3>April Matcha Café</h3>
+      </div>
+
+      <p>
+        Crafted for quiet mornings, slow afternoons, and meaningful
+        conversations.
+      </p>
+
+      <div class="footer-socials" aria-label="Social links">
+        <a href="#" aria-label="Instagram">
+          <i class="ph ph-instagram-logo"></i>
+        </a>
+        <a href="#" aria-label="TikTok">
+          <i class="ph ph-tiktok-logo"></i>
+        </a>
+        <a href="#" aria-label="Pinterest">
+          <i class="ph ph-pinterest-logo"></i>
+        </a>
+        <a href="contact.html" aria-label="Contact">
+          <i class="ph ph-envelope-simple"></i>
+        </a>
+      </div>
+
+      <p class="copyright">
+        © 2026 April Matcha Café • Created by Thi Phuong To
+      </p>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!-- This document is the about page for the ITD 210 capstone website. -->
+<html lang="en">
+  <head>
+    <!-- Meta tags help the page display correctly on mobile and desktop. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>April Matcha Café | About</title>
+
+    <!-- Google Fonts create a polished café brand identity. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Phosphor Icons for matcha-themed iconography. -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css"
+    />
+
+    <!-- Shared CSS keeps all five pages visually consistent. -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Skip link supports keyboard users by allowing them to jump to content. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Header contains the brand and global navigation used on every page. -->
+    <header class="site-header">
+      <nav class="nav-wrap" aria-label="Main navigation">
+        <a class="logo" href="index.html">
+          <i class="ph-fill ph-leaf logo-icon" aria-hidden="true"></i>
+          April Matcha Café
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="services.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <!-- This hero section introduces the café concept with text and a storefront image. -->
+      <section class="about-hero" aria-labelledby="about-title">
+        <span class="deco-orb deco-orb-left" aria-hidden="true"></span>
+        <span class="deco-orb deco-orb-right" aria-hidden="true"></span>
+
+        <div class="about-text" data-reveal>
+          <p class="eyebrow">
+            <i class="ph-fill ph-storefront"></i> About the Concept
+          </p>
+
+          <h1 id="about-title">
+            A café inspired by calm rituals, clean ingredients, and modern
+            comfort.
+          </h1>
+
+          <p class="lead">
+            April Matcha Café is imagined as a small neighborhood destination
+            where people can slow down and enjoy high-quality matcha in a
+            beautiful, peaceful environment.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="services.html" class="button">
+              Explore the Menu
+              <i class="ph ph-arrow-right"></i>
+            </a>
+            <a href="contact.html" class="button-secondary">
+              <i class="ph ph-map-pin"></i>
+              Plan a visit
+            </a>
+          </div>
+        </div>
+
+        <!-- This image card uses CSS 3D transforms to make the storefront feel interactive. -->
+        <div class="storefront-3d-card" data-reveal data-reveal-delay="180">
+          <img
+            src="images/storefront.png"
+            alt="Front view of April Matcha Café storefront"
+          />
+          <span class="storefront-badge storefront-badge-top" aria-hidden="true">
+            <i class="ph-fill ph-leaf"></i>
+            Est. 2026
+          </span>
+          <span class="storefront-badge storefront-badge-bottom" aria-hidden="true">
+            <i class="ph-fill ph-coffee"></i>
+            Open daily
+          </span>
+        </div>
+      </section>
+
+      <!-- This stats strip highlights the brand essence in three numbers. -->
+      <section class="stats-strip" aria-label="By the numbers">
+        <div class="stat" data-reveal data-reveal-delay="0">
+          <div class="stat-icon">
+            <i class="ph-duotone ph-flower-lotus"></i>
+          </div>
+          <span class="stat-number">100<small>%</small></span>
+          <span class="stat-label">Ceremonial-grade matcha</span>
+        </div>
+        <div class="stat" data-reveal data-reveal-delay="120">
+          <div class="stat-icon">
+            <i class="ph-duotone ph-coffee"></i>
+          </div>
+          <span class="stat-number">12<small>+</small></span>
+          <span class="stat-label">Signature drinks &amp; desserts</span>
+        </div>
+        <div class="stat" data-reveal data-reveal-delay="240">
+          <div class="stat-icon">
+            <i class="ph-duotone ph-users-three"></i>
+          </div>
+          <span class="stat-number">7</span>
+          <span class="stat-label">Days a week, soft and slow</span>
+        </div>
+      </section>
+
+      <!-- This section explains the core values behind the café brand. -->
+      <section class="about-values" aria-labelledby="values-title">
+        <p class="eyebrow values-eyebrow" data-reveal>
+          <i class="ph-fill ph-sparkle"></i> What We Stand For
+        </p>
+        <h2 id="values-title" class="values-title" data-reveal>
+          Three quiet promises behind every cup.
+        </h2>
+
+        <div class="values-grid">
+          <article class="story-card" data-reveal data-reveal-delay="0">
+            <div class="card-icon">
+              <i class="ph-duotone ph-leaf"></i>
+            </div>
+            <span class="tag">Ingredient Focus</span>
+            <h2>Quality first</h2>
+            <p>
+              Ceremonial-grade matcha, house-made syrups, and balanced desserts
+              support the story of care and quality.
+            </p>
+          </article>
+
+          <article class="story-card" data-reveal data-reveal-delay="140">
+            <div class="card-icon">
+              <i class="ph-duotone ph-cloud"></i>
+            </div>
+            <span class="tag">Atmosphere</span>
+            <h2>Soft and welcoming</h2>
+            <p>
+              Green and cream colors, natural wood textures, and gentle motion
+              create a comforting café experience.
+            </p>
+          </article>
+
+          <article class="story-card" data-reveal data-reveal-delay="280">
+            <div class="card-icon">
+              <i class="ph-duotone ph-users-three"></i>
+            </div>
+            <span class="tag">Connection</span>
+            <h2>Community-centered</h2>
+            <p>
+              The café is presented as a social and creative space for
+              studying, meeting friends, and joining matcha workshops.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- This section shows the brand journey as a numbered visual timeline. -->
+      <section class="section journey-section">
+        <span class="deco-orb deco-orb-left" aria-hidden="true"></span>
+
+        <p class="eyebrow" data-reveal>
+          <i class="ph-fill ph-path"></i> Brand Journey
+        </p>
+        <h2 data-reveal>How the idea comes to life.</h2>
+
+        <ol class="journey-list">
+          <li class="journey-step" data-reveal data-reveal-delay="0">
+            <span class="journey-number">01</span>
+            <div class="journey-content">
+              <i class="ph-duotone ph-sparkle journey-icon"></i>
+              <h3>Create a calm first impression</h3>
+              <p>
+                The home page opens with a hand-whisked moment, soft typography,
+                and gentle motion to set the mood.
+              </p>
+            </div>
+          </li>
+          <li class="journey-step" data-reveal data-reveal-delay="120">
+            <span class="journey-number">02</span>
+            <div class="journey-content">
+              <i class="ph-duotone ph-leaf journey-icon"></i>
+              <h3>Share café values and ingredients</h3>
+              <p>
+                The about page explains where the quality comes from and the
+                rituals behind every drink.
+              </p>
+            </div>
+          </li>
+          <li class="journey-step" data-reveal data-reveal-delay="240">
+            <span class="journey-number">03</span>
+            <div class="journey-content">
+              <i class="ph-duotone ph-coffee journey-icon"></i>
+              <h3>Showcase drinks, desserts, and experiences</h3>
+              <p>
+                The menu lays out the full lineup with warm photography and
+                clear descriptions.
+              </p>
+            </div>
+          </li>
+          <li class="journey-step" data-reveal data-reveal-delay="360">
+            <span class="journey-number">04</span>
+            <div class="journey-content">
+              <i class="ph-duotone ph-image-square journey-icon"></i>
+              <h3>Build atmosphere with the gallery</h3>
+              <p>
+                A curated grid of café moments helps visitors imagine the
+                texture of being inside.
+              </p>
+            </div>
+          </li>
+          <li class="journey-step" data-reveal data-reveal-delay="480">
+            <span class="journey-number">05</span>
+            <div class="journey-content">
+              <i class="ph-duotone ph-envelope-simple journey-icon"></i>
+              <h3>Make contact easy and accessible</h3>
+              <p>
+                A friendly form and clear hours close the experience and invite
+                people in.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <!-- Footer closes the page and repeats the project identity. -->
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <i class="ph-fill ph-leaf footer-leaf"></i>
+        <h3>April Matcha Café</h3>
+      </div>
+
+      <p>
+        Crafted for quiet mornings, slow afternoons, and meaningful
+        conversations.
+      </p>
+
+      <div class="footer-socials" aria-label="Social links">
+        <a href="#" aria-label="Instagram">
+          <i class="ph ph-instagram-logo"></i>
+        </a>
+        <a href="#" aria-label="TikTok">
+          <i class="ph ph-tiktok-logo"></i>
+        </a>
+        <a href="#" aria-label="Pinterest">
+          <i class="ph ph-pinterest-logo"></i>
+        </a>
+        <a href="contact.html" aria-label="Contact">
+          <i class="ph ph-envelope-simple"></i>
+        </a>
+      </div>
+
+      <p class="copyright">
+        © 2026 April Matcha Café • Created by Thi Phuong To
+      </p>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

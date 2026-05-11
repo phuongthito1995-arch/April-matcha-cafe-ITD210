@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!-- This document is the gallery page for the ITD 210 capstone website. -->
+<html lang="en">
+  <head>
+    <!-- Meta tags help the page display correctly on mobile and desktop. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>April Matcha Café | Gallery</title>
+    <!-- Google Fonts create a polished café brand identity. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Phosphor Icons for matcha-themed iconography. -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css"
+    />
+
+    <!-- Shared CSS keeps all five pages visually consistent. -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Skip link supports keyboard users by allowing them to jump to content. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- Header contains the brand and global navigation used on every page. -->
+    <header class="site-header">
+      <nav class="nav-wrap" aria-label="Main navigation">
+        <a class="logo" href="index.html">
+          <i class="ph-fill ph-leaf logo-icon" aria-hidden="true"></i>
+          April Matcha Café
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Menu</a></li>
+          <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-content">
+      <section class="page-section gallery-section">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">
+            <i class="ph-fill ph-camera"></i> Our Café Moments
+          </p>
+          <h1>April Matcha Café Gallery</h1>
+          <p>
+            A visual story of our drinks, desserts, cozy seating, and community
+            matcha experiences. Click any photo to see it larger.
+          </p>
+        </div>
+
+        <div class="card-grid three">
+          <article class="gallery-card" data-reveal data-reveal-delay="0">
+            <img
+              src="images/sunlit bar with Macha tools and bamboo whisks.png"
+              alt="Sunlit bar with matcha tools and bamboo whisks"
+            />
+            <div class="gallery-content">
+              <span class="gallery-tag">
+                <i class="ph-fill ph-coffee"></i> Tea Bar
+              </span>
+              <h3>Matcha Tools</h3>
+              <p>Sunlit bar with bamboo whisks and traditional matcha tools.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card" data-reveal data-reveal-delay="100">
+            <img
+              src="images/Signature strawberry matcha.png"
+              alt="Signature strawberry matcha latte with layered colors"
+            />
+            <div class="gallery-content">
+              <span class="gallery-tag">
+                <i class="ph-fill ph-sparkle"></i> Signature Drink
+              </span>
+              <h3>Strawberry Matcha</h3>
+              <p>
+                A colorful layered latte with creamy matcha and sweet
+                strawberry.
+              </p>
+            </div>
+          </article>
+
+          <article class="gallery-card" data-reveal data-reveal-delay="200">
+            <img
+              src="images/Quiet seating corner for reading and study dates.png"
+              alt="Quiet seating corner for reading and study dates"
+            />
+            <div class="gallery-content">
+              <span class="gallery-tag">
+                <i class="ph-fill ph-armchair"></i> Interior
+              </span>
+              <h3>Cozy Seating</h3>
+              <p>
+                A quiet corner designed for reading, studying, and relaxing.
+              </p>
+            </div>
+          </article>
+
+          <article class="gallery-card" data-reveal data-reveal-delay="300">
+            <img
+              src="images/Pastry case with mochi waffle and Hoji dessert.png"
+              alt="Pastry case with mochi waffles and hojicha desserts"
+            />
+            <div class="gallery-content">
+              <span class="gallery-tag">
+                <i class="ph-fill ph-cookie"></i> Desserts
+              </span>
+              <h3>Mochi Waffles</h3>
+              <p>Soft mochi waffles and hojicha desserts in our pastry case.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card" data-reveal data-reveal-delay="400">
+            <img
+              src="images/Minimallist design branding.png"
+              alt="Minimalist cup design, menu cards, and green branding"
+            />
+            <div class="gallery-content">
+              <span class="gallery-tag">
+                <i class="ph-fill ph-palette"></i> Branding
+              </span>
+              <h3>Minimal Design</h3>
+              <p>Clean cups, menu cards, and soft green café branding.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card" data-reveal data-reveal-delay="500">
+            <img
+              src="images/Community workshop table set for tea tasting.png"
+              alt="Community workshop table set for tea tasting"
+            />
+            <div class="gallery-content">
+              <span class="gallery-tag">
+                <i class="ph-fill ph-users-three"></i> Workshop
+              </span>
+              <h3>Tea Tasting</h3>
+              <p>A community table prepared for matcha tasting and learning.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Closing CTA invites visitors to share their café moments. -->
+      <section class="section">
+        <div class="cta-strip" data-reveal>
+          <span class="deco-orb deco-orb-left" aria-hidden="true"></span>
+          <span class="deco-orb deco-orb-right" aria-hidden="true"></span>
+
+          <div class="cta-content">
+            <p class="eyebrow">
+              <i class="ph-fill ph-heart"></i> Share the Moment
+            </p>
+            <h2>Tag your matcha visits.</h2>
+            <p>
+              Use <strong>#AprilMatcha</strong> or tag us — we love reposting
+              quiet morning shots, latte art, and study sessions in the corner
+              by the window.
+            </p>
+            <div class="hero-buttons">
+              <a class="button" href="#" aria-label="Follow on Instagram">
+                <i class="ph-fill ph-instagram-logo"></i>
+                Follow on Instagram
+              </a>
+              <a class="button-secondary" href="contact.html">
+                <i class="ph ph-map-pin"></i>
+                Plan a visit
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- This lightbox opens a larger version of a gallery image when users click it. -->
+      <div class="lightbox" id="galleryLightbox" aria-hidden="true">
+        <!-- This button closes the enlarged image and supports keyboard users. -->
+        <button
+          class="lightbox-close"
+          id="lightboxClose"
+          aria-label="Close image"
+        >
+          &times;
+        </button>
+
+        <!-- JavaScript changes this image source based on the gallery image clicked. -->
+        <img id="lightboxImage" src="" alt="" />
+      </div>
+    </main>
+    <!-- Footer closes the page and repeats the project identity. -->
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <i class="ph-fill ph-leaf footer-leaf"></i>
+        <h3>April Matcha Café</h3>
+      </div>
+
+      <p>
+        Crafted for quiet mornings, slow afternoons, and meaningful
+        conversations.
+      </p>
+
+      <div class="footer-socials" aria-label="Social links">
+        <a href="#" aria-label="Instagram">
+          <i class="ph ph-instagram-logo"></i>
+        </a>
+        <a href="#" aria-label="TikTok">
+          <i class="ph ph-tiktok-logo"></i>
+        </a>
+        <a href="#" aria-label="Pinterest">
+          <i class="ph ph-pinterest-logo"></i>
+        </a>
+        <a href="contact.html" aria-label="Contact">
+          <i class="ph ph-envelope-simple"></i>
+        </a>
+      </div>
+
+      <p class="copyright">
+        © 2026 April Matcha Café • Created by Thi Phuong To
+      </p>
+    </footer>
+    <script src="js/main.js" defer></script>
+    <script>
+      /* This code lets users click a gallery image to view it larger. */
+      const galleryImages = document.querySelectorAll(".gallery-card img");
+      const lightbox = document.getElementById("galleryLightbox");
+      const lightboxImage = document.getElementById("lightboxImage");
+      const lightboxClose = document.getElementById("lightboxClose");
+
+      /* This opens the lightbox and copies the clicked image into the large preview. */
+      galleryImages.forEach((image) => {
+        image.addEventListener("click", () => {
+          lightboxImage.src = image.src;
+          lightboxImage.alt = image.alt;
+          lightbox.classList.add("active");
+          lightbox.setAttribute("aria-hidden", "false");
+          lightboxClose.focus();
+        });
+      });
+
+      /* This function closes the lightbox and clears the image source. */
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        lightbox.setAttribute("aria-hidden", "true");
+        lightboxImage.src = "";
+        lightboxImage.alt = "";
+      }
+
+      /* This closes the lightbox when users click the X button. */
+      lightboxClose.addEventListener("click", closeLightbox);
+
+      /* This closes the lightbox when users click the dark background. */
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      /* This closes the lightbox when users press the Escape key. */
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && lightbox.classList.contains("active")) {
+          closeLightbox();
+        }
+      });
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<!-- This document is the contact page for the ITD 210 capstone website. -->
+<html lang="en">
+  <head>
+    <!-- Meta tags help the page display correctly on mobile and desktop. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>April Matcha Café | Contact</title>
+    <!-- Google Fonts create a polished café brand identity. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Phosphor Icons for matcha-themed iconography. -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css"
+    />
+
+    <!-- Shared CSS keeps all five pages visually consistent. -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Contact Page Inline CSS: required by the assignment for form and interactive styling. */
+      .contact-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        align-items: start;
+        margin-top: 2.5rem;
+      }
+      .contact-panel {
+        background: #fff;
+        border: 1px solid rgba(109, 139, 92, 0.16);
+        border-radius: 22px;
+        box-shadow: 0 18px 40px rgba(37, 49, 38, 0.12);
+        padding: 1.75rem;
+      }
+      .contact-panel h2 {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        margin-bottom: 0.4rem;
+      }
+      .contact-panel h2 i {
+        color: var(--matcha);
+        font-size: 1.5rem;
+      }
+      .panel-intro {
+        color: rgba(37, 49, 38, 0.72);
+        margin-bottom: 1.25rem;
+      }
+
+      /* Contact info strip at the top: location, hours, email, phone. */
+      .contact-info-strip {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin: 2rem 0 0;
+      }
+      .info-card {
+        background: #fff;
+        border: 1px solid rgba(109, 139, 92, 0.14);
+        border-radius: 22px;
+        padding: 1.25rem;
+        text-align: center;
+        box-shadow: 0 12px 28px rgba(37, 49, 38, 0.08);
+        transition: transform 0.32s ease, box-shadow 0.32s ease;
+      }
+      .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(37, 49, 38, 0.16);
+      }
+      .info-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 16px;
+        margin: 0 auto 0.75rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--sage), var(--foam));
+        color: var(--matcha);
+        font-size: 1.7rem;
+        box-shadow: 0 8px 18px rgba(109, 139, 92, 0.2);
+        transition: transform 0.4s ease;
+      }
+      .info-card:hover .info-icon {
+        transform: rotate(-8deg) scale(1.06);
+      }
+      .info-card h3 {
+        margin: 0 0 0.4rem;
+        font-size: 1.05rem;
+      }
+      .info-card p {
+        margin: 0;
+        color: rgba(37, 49, 38, 0.78);
+        font-size: 0.92rem;
+        line-height: 1.55;
+      }
+      .form-group {
+        margin-bottom: 1rem;
+      }
+      label {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 0.35rem;
+        color: #253126;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.85rem 0.9rem;
+        border: 1px solid rgba(37, 49, 38, 0.18);
+        border-radius: 14px;
+        font: inherit;
+        background: #fbfcf8;
+        transition: border-color 0.25s ease, box-shadow 0.25s ease,
+          background-color 0.25s ease;
+      }
+      input:focus,
+      textarea:focus {
+        background: #fff;
+        border-color: var(--matcha);
+        box-shadow: 0 0 0 4px rgba(109, 139, 92, 0.18);
+        outline: none;
+      }
+      label {
+        display: flex !important;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      label i {
+        color: var(--matcha);
+        font-size: 1.05rem;
+      }
+      .helper-text,
+      .counter {
+        font-size: 0.9rem;
+        color: rgba(37, 49, 38, 0.76);
+        margin-top: 0.35rem;
+      }
+      .error-text {
+        color: #9a1f1f;
+        font-size: 0.92rem;
+        margin-top: 0.35rem;
+        min-height: 1.25rem;
+      }
+      .is-invalid {
+        border-color: #9a1f1f;
+        background: #fff7f7;
+      }
+      .action-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        align-items: center;
+      }
+      .submit-button,
+      .toggle-button {
+        border: none;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 600;
+        padding: 0.95rem 1.5rem;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease,
+          background-color 0.3s ease;
+      }
+      .submit-button {
+        background: #6d8b5c;
+        color: #fff;
+        box-shadow: 0 12px 26px rgba(109, 139, 92, 0.32);
+      }
+      .submit-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 34px rgba(109, 139, 92, 0.42);
+      }
+      .submit-button:hover i {
+        transform: translateX(3px);
+      }
+      .submit-button i,
+      .toggle-button i {
+        transition: transform 0.3s ease;
+      }
+      .toggle-button {
+        background: #edf4e8;
+        color: #253126;
+        border: 1px solid rgba(37, 49, 38, 0.12);
+      }
+      .toggle-button:hover {
+        transform: translateY(-3px);
+        background: #dce8d5;
+      }
+      .status-box,
+      .hours-panel {
+        display: none;
+        margin-top: 0.75rem;
+        padding: 0.9rem 1rem;
+        border-radius: 14px;
+        background: #edf4e8;
+        color: #253126;
+      }
+      .status-box.show,
+      .hours-panel.show {
+        display: block;
+      }
+      .thank-you {
+        display: none;
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 18px;
+        background: linear-gradient(135deg, #dce8d5, #f4ecdf);
+        box-shadow: 0 14px 30px rgba(37, 49, 38, 0.12);
+      }
+      .thank-you.show {
+        display: block;
+      }
+      .faq details {
+        border: 1px solid rgba(109, 139, 92, 0.16);
+        border-radius: 16px;
+        padding: 0.85rem 1rem;
+        background: #fbfcf8;
+        margin-bottom: 0.8rem;
+      }
+      .faq summary {
+        cursor: pointer;
+        font-weight: 700;
+      }
+      @media (min-width: 800px) {
+        .contact-layout {
+          grid-template-columns: 1.15fr 0.85fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Skip link supports keyboard users by allowing them to jump to content. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- Header contains the brand and global navigation used on every page. -->
+    <header class="site-header">
+      <nav class="nav-wrap" aria-label="Main navigation">
+        <a class="logo" href="index.html">
+          <i class="ph-fill ph-leaf logo-icon" aria-hidden="true"></i>
+          April Matcha Café
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-content">
+      <section class="section" aria-labelledby="contact-title">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">
+            <i class="ph-fill ph-paper-plane-tilt"></i> Get in Touch
+          </p>
+          <h1 id="contact-title">
+            Ask about visits, workshops, or private café events.
+          </h1>
+          <p>
+            We'd love to hear from you — whether you're planning a quiet study
+            morning, a small workshop, or a community matcha tasting. Reach out
+            and we'll get back within a day.
+          </p>
+        </div>
+
+        <div class="contact-info-strip">
+          <div class="info-card" data-reveal data-reveal-delay="0">
+            <div class="info-icon">
+              <i class="ph-duotone ph-map-pin"></i>
+            </div>
+            <h3>Visit us</h3>
+            <p>
+              123 Quiet Lane<br />
+              Springfield, VA
+            </p>
+          </div>
+          <div class="info-card" data-reveal data-reveal-delay="100">
+            <div class="info-icon">
+              <i class="ph-duotone ph-clock"></i>
+            </div>
+            <h3>Open hours</h3>
+            <p>
+              Mon–Thu · 8 AM – 6 PM<br />
+              Fri–Sun · 9 AM – 7 PM
+            </p>
+          </div>
+          <div class="info-card" data-reveal data-reveal-delay="200">
+            <div class="info-icon">
+              <i class="ph-duotone ph-envelope-simple"></i>
+            </div>
+            <h3>Email us</h3>
+            <p>hello@aprilmatcha.cafe</p>
+          </div>
+          <div class="info-card" data-reveal data-reveal-delay="300">
+            <div class="info-icon">
+              <i class="ph-duotone ph-phone"></i>
+            </div>
+            <h3>Call us</h3>
+            <p>(703) 555&#8209;0142</p>
+          </div>
+        </div>
+
+        <div class="contact-layout">
+          <section
+            class="contact-panel"
+            aria-labelledby="form-title"
+            data-reveal
+          >
+            <h2 id="form-title">
+              <i class="ph-fill ph-chat-circle-text"></i> Send a Message
+            </h2>
+            <p class="panel-intro">
+              Use this form for booking questions, event ideas, or menu
+              collaborations.
+            </p>
+            <div id="statusBox" class="status-box" aria-live="polite"></div>
+
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/xgodywpr"
+              method="POST"
+              novalidate
+            >
+              <div class="form-group">
+                <label for="name">
+                  <i class="ph ph-user"></i> Full name
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Enter your full name"
+                  required
+                  aria-describedby="nameHelp nameError"
+                />
+                <p id="nameHelp" class="helper-text">
+                  Please share the name you want us to use when replying.
+                </p>
+                <p id="nameError" class="error-text" aria-live="polite"></p>
+              </div>
+              <div class="form-group">
+                <label for="email">
+                  <i class="ph ph-envelope-simple"></i> Email address
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="name@example.com"
+                  required
+                  aria-describedby="emailHelp emailError"
+                />
+                <p id="emailHelp" class="helper-text">
+                  We will only use your email to answer your message.
+                </p>
+                <p id="emailError" class="error-text" aria-live="polite"></p>
+              </div>
+              <div class="form-group">
+                <label for="subject">
+                  <i class="ph ph-tag"></i> Subject
+                </label>
+                <input
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  placeholder="Workshop, event, collaboration, or general question"
+                  required
+                  aria-describedby="subjectHelp subjectError"
+                />
+                <p id="subjectHelp" class="helper-text">
+                  A short subject line helps your request feel clear.
+                </p>
+                <p id="subjectError" class="error-text" aria-live="polite"></p>
+              </div>
+              <div class="form-group">
+                <label for="message">
+                  <i class="ph ph-note-pencil"></i> Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Tell us about your question or event idea"
+                  required
+                  aria-describedby="messageHelp messageCounter messageError"
+                ></textarea>
+                <p id="messageHelp" class="helper-text">
+                  Please write at least 20 characters.
+                </p>
+                <p id="messageCounter" class="counter">0 characters</p>
+                <p id="messageError" class="error-text" aria-live="polite"></p>
+              </div>
+              <div class="action-row">
+                <button class="submit-button" type="submit">
+                  Send message
+                  <i class="ph ph-paper-plane-tilt"></i>
+                </button>
+                <button
+                  class="toggle-button"
+                  type="button"
+                  id="hoursToggle"
+                  aria-expanded="false"
+                  aria-controls="hoursPanel"
+                >
+                  <i class="ph ph-clock"></i>
+                  View café hours
+                </button>
+              </div>
+            </form>
+            <div id="thankYouCard" class="thank-you" aria-live="polite">
+              <h3>
+                <i class="ph-fill ph-leaf"></i> Thank you for reaching out!
+              </h3>
+              <p>
+                Your message is on its way. We'll get back to you within a day.
+              </p>
+            </div>
+            <div id="hoursPanel" class="hours-panel">
+              <strong>
+                <i class="ph-fill ph-storefront"></i> Café hours
+              </strong>
+              <p>Monday–Thursday: 8:00 AM – 6:00 PM</p>
+              <p>Friday–Sunday: 9:00 AM – 7:00 PM</p>
+            </div>
+          </section>
+          <aside
+            class="contact-panel"
+            aria-labelledby="extras-title"
+            data-reveal
+            data-reveal-delay="120"
+          >
+            <h2 id="extras-title">
+              <i class="ph-fill ph-question"></i> Frequently Asked
+            </h2>
+            <p class="panel-intro">
+              Quick answers to the questions we hear most often.
+            </p>
+            <div class="faq" aria-label="Frequently asked questions">
+              <details>
+                <summary>Do you host private events?</summary>
+                <p>
+                  Yes. April Matcha Café is imagined as a cozy venue for small
+                  gatherings and workshops.
+                </p>
+              </details>
+              <details>
+                <summary>Can I ask about a custom workshop?</summary>
+                <p>Yes. Use the subject line to mention "Workshop Inquiry."</p>
+              </details>
+              <details>
+                <summary>Is this page accessible on keyboard?</summary>
+                <p>
+                  Yes. Fields, buttons, details panels, and links are reachable
+                  by keyboard.
+                </p>
+              </details>
+              <details>
+                <summary>Do you have non-dairy milk options?</summary>
+                <p>
+                  Always — oat, almond, and soy are available for any drink at
+                  no extra cost.
+                </p>
+              </details>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <script>
+        /* Contact Page Inline JavaScript: validates the form and controls interactive features. */
+        const form = document.getElementById("contactForm"),
+          nameInput = document.getElementById("name"),
+          emailInput = document.getElementById("email"),
+          subjectInput = document.getElementById("subject"),
+          messageInput = document.getElementById("message"),
+          statusBox = document.getElementById("statusBox"),
+          thankYouCard = document.getElementById("thankYouCard"),
+          messageCounter = document.getElementById("messageCounter"),
+          hoursToggle = document.getElementById("hoursToggle"),
+          hoursPanel = document.getElementById("hoursPanel");
+        const errorMap = {
+          name: document.getElementById("nameError"),
+          email: document.getElementById("emailError"),
+          subject: document.getElementById("subjectError"),
+          message: document.getElementById("messageError"),
+        };
+        function setError(input, errorElement, message) {
+          input.classList.add("is-invalid");
+          errorElement.textContent = message;
+        }
+        function clearError(input, errorElement) {
+          input.classList.remove("is-invalid");
+          errorElement.textContent = "";
+        }
+        function isValidEmail(email) {
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+        function validateForm() {
+          let isValid = true,
+            errorCount = 0;
+          clearError(nameInput, errorMap.name);
+          clearError(emailInput, errorMap.email);
+          clearError(subjectInput, errorMap.subject);
+          clearError(messageInput, errorMap.message);
+          statusBox.classList.remove("show");
+          statusBox.textContent = "";
+          if (nameInput.value.trim() === "") {
+            setError(nameInput, errorMap.name, "Please enter your full name.");
+            isValid = false;
+            errorCount++;
+          }
+          if (emailInput.value.trim() === "") {
+            setError(
+              emailInput,
+              errorMap.email,
+              "Please enter your email address."
+            );
+            isValid = false;
+            errorCount++;
+          } else if (!isValidEmail(emailInput.value.trim())) {
+            setError(
+              emailInput,
+              errorMap.email,
+              "Please enter a valid email format."
+            );
+            isValid = false;
+            errorCount++;
+          }
+          if (subjectInput.value.trim() === "") {
+            setError(subjectInput, errorMap.subject, "Please enter a subject.");
+            isValid = false;
+            errorCount++;
+          }
+          if (messageInput.value.trim() === "") {
+            setError(
+              messageInput,
+              errorMap.message,
+              "Please enter your message."
+            );
+            isValid = false;
+            errorCount++;
+          } else if (messageInput.value.trim().length < 20) {
+            setError(
+              messageInput,
+              errorMap.message,
+              "Please write at least 20 characters."
+            );
+            isValid = false;
+            errorCount++;
+          }
+          if (!isValid) {
+            statusBox.textContent = `Please fix ${errorCount} field(s) before submitting.`;
+            statusBox.classList.add("show");
+          }
+          return isValid;
+        }
+        messageInput.addEventListener("input", () => {
+          messageCounter.textContent = `${messageInput.value.length} characters`;
+          if (messageInput.value.length >= 20) {
+            clearError(messageInput, errorMap.message);
+          }
+        });
+        hoursToggle.addEventListener("click", () => {
+          const expanded = hoursToggle.getAttribute("aria-expanded") === "true";
+          hoursToggle.setAttribute("aria-expanded", String(!expanded));
+          hoursPanel.classList.toggle("show");
+        });
+        form.addEventListener("submit", (event) => {
+          if (!validateForm()) {
+            event.preventDefault();
+            return;
+          }
+          thankYouCard.classList.add("show");
+          statusBox.textContent = "Your form passed validation successfully.";
+          statusBox.classList.add("show");
+          if (form.action.includes("YOUR_FORM_ID")) {
+            event.preventDefault();
+          }
+        });
+      </script>
+    </main>
+    <!-- Footer closes the page and repeats the project identity. -->
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <i class="ph-fill ph-leaf footer-leaf"></i>
+        <h3>April Matcha Café</h3>
+      </div>
+
+      <p>
+        Crafted for quiet mornings, slow afternoons, and meaningful
+        conversations.
+      </p>
+
+      <div class="footer-socials" aria-label="Social links">
+        <a href="#" aria-label="Instagram">
+          <i class="ph ph-instagram-logo"></i>
+        </a>
+        <a href="#" aria-label="TikTok">
+          <i class="ph ph-tiktok-logo"></i>
+        </a>
+        <a href="#" aria-label="Pinterest">
+          <i class="ph ph-pinterest-logo"></i>
+        </a>
+        <a href="contact.html" aria-label="Contact">
+          <i class="ph ph-envelope-simple"></i>
+        </a>
+      </div>
+
+      <p class="copyright">
+        © 2026 April Matcha Café • Created by Thi Phuong To
+      </p>
+    </footer>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
